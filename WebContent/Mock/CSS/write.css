@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.a{
+	text-align:center;
+	margin-bottom:5em;
+}
+
+.aa{
+	text-align:center;
+}
+
+.table-area {
+	width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 5em;
+}
+
+
+.aaa{
+	height: 20em;
+}
+
+.center{
+	text-align: center;
+}
+
+.return{
+	margin-left: 5em;
+}

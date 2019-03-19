@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.body{
+	background-image: url(img/b120);
+	}
+
+.a{
+	color:;
+	text-align: center;
+}
+
+.aa{
+	background-color:;
+}
+
+.aaa{
+	text-align: right;
+}
+
+.table-area {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.right{
+	text-align: right;
+	margin-right:5em;
+}
