@@ -13,9 +13,6 @@
 	background-color:;
 }
 
-.aaa{
-	text-align: right;
-}
 
 .table-area {
 	width: 1200px;
@@ -24,5 +21,31 @@
 
 .right{
 	text-align: right;
-	margin-right:5em;
+	margin-right:7em;
+}
+
+.logout{
+	text-align: right;
+	background-color: gray;
+}
+
+.logout2{
+	color: red;
+	text-decoration: underline;
+	margin-left: 2em;
+	font-size: 100%;
+	font-size: 100%;
+}
+
+.log{
+	text-align: right;
+	background-color: gray;
+}
+
+.log2{
+	color: red;
+	text-decoration: underline;
+	margin-left: 2em;
+	font-size: 100%;
+	font-size: 100%;
 }

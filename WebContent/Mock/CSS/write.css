@@ -27,3 +27,20 @@
 .return{
 	margin-left: 5em;
 }
+
+.logout{
+	text-align: right;
+	background-color: gray;
+	color: gray;
+}
+
+.logout2{
+	color: red;
+	text-decoration: underline;
+	margin-left: 2em;
+	font-size: 100%;
+}
+
+.size{
+	font-size: 100%;
+}

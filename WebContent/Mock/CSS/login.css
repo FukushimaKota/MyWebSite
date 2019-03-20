@@ -28,7 +28,7 @@
 }
 
 .body{
-	background-color: lightgreen;
+	background-color: ;
 }
 
 .new{
@@ -37,4 +37,8 @@
 }
 .text{
 	text-align:center ;
+}
+
+.z{
+	text-align: center;
 }

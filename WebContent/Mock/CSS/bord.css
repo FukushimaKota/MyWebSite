@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.a{
+	text-align: center;
+}
+
+.tittle{
+	text-align: center;
+}
+
+.table-area {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.delete{
+	text-align:right;
+	margin-right:8em;
+}
+.space{
+	margin-bottom: 3em;
+}

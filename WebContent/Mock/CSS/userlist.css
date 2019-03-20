@@ -2,6 +2,7 @@
 .logout{
 	text-align: right;
 	background-color: gray;
+	color: gray;
 }
 
 .logout2{
@@ -83,4 +84,15 @@
 	margin-right: 3em;
 	}
 
+.aa{
+	text-align: center;
+}
+
+.table-area {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.color{
+	background-color:;
 }
