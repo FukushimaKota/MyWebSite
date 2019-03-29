@@ -8,15 +8,32 @@ public class Thread {
 	private String userId;
 	private String createDate;
 
+	private String name;
 
-	//全てのデータをセットするコンストラクタ
-	public Thread(int id ,String tittle ,String text ,String userId ,String createDate) {
+
+	public Thread(int id ,String tittle ,String text ,String userId ,String createDate ) {
 		this.id = id;
 		this.tittle = tittle;
 		this.text = text;
 		this.userId = userId;
 		this.createDate = createDate;
 	}
+
+	//全てのデータをセットするコンストラクタ
+	public Thread(int id ,String tittle ,String text ,String userId ,String createDate ,String name) {
+		this.id = id;
+		this.tittle = tittle;
+		this.text = text;
+		this.userId = userId;
+		this.createDate = createDate;
+		this.name = name;
+	}
+
+
+//	public String getFormatDate() {
+//		SimpleDateFormat sdf = new SimpleDateFormat("yyyy年MM月dd日HH時mm分");
+//		return sdf.format(createDate);
+//	}
 
 	public int getId() {
 		return id;
@@ -47,5 +64,15 @@ public class Thread {
 	}
 	public void setUserId(String userId) {
 		this.userId = userId;
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }

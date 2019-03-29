@@ -55,6 +55,7 @@
 				<c:forEach var="thread" items="${threadList}">
 					<tr>
 						<th scope="row">${thread.createDate}</th>
+						<%-- <th scope="row">${thread.formatDate}</th> --%>
 						<td><a href="bordServlet?id=${thread.id}">${thread.tittle}</a></td>
 					</tr>
 				</c:forEach>

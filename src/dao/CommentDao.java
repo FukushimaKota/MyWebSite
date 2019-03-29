@@ -53,7 +53,12 @@ public class CommentDao {
 			conn = DBManager.getConnection();
 			// SELECT文を準備
 			//String sql = "SELECT * FROM comment WHERE thread_id=? ORDER BY create_date DESC;";
-			String sql = "SELECT * FROM comment WHERE thread_id=?;";
+			//String sql = "SELECT * FROM comment WHERE thread_id=?";
+			String sql ="SELECT * FROM comment INNER JOIN user ON comment.userid = user.id WHERE comment.thread_id=?;";
+
+			//SELECT * FROM comment WHERE thread_id=?
+
+			//SELECT * FROM commet INNER JOIN user ON comment.userid = user.id WHERE comment.id=?;
 //SELECT * FROM comment WHERE thread_id='13';//ok
 			// SELECTを実行し、結果表を取得
 			PreparedStatement stmt = conn.prepareStatement(sql);
@@ -70,8 +75,9 @@ public class CommentDao {
 				String userId = rs.getString("userid");
 				String threadId2 = rs.getString("thread_id");
 				String createDate = rs.getString("create_date");
+				String name = rs.getString("name");
 
-				Comment comment = new Comment(id, commentt, userId,threadId2, createDate);
+				Comment comment = new Comment(id, commentt, userId,threadId2, createDate,name);
 
 				commentList.add(comment);
 			}

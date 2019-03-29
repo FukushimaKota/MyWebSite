@@ -53,7 +53,10 @@ public class ThreadDao {
 
 			// SELECT文を準備
 
-			String sql = "SELECT * FROM thread WHERE id ORDER BY create_date DESC";
+			String sql = "SELECT * FROM thread WHERE id ORDER BY create_date DESC;";
+			//SELECT * FROM thread INNER JOIN user ON thread.userid = user.id";
+			//SELECT * FROM thread INNER JOIN user ON thread.userid = user.id
+			// ORDER BY create_date DESC
 
 			// SELECTを実行し、結果表を取得
 			Statement stmt = conn.createStatement();
@@ -95,7 +98,10 @@ public class ThreadDao {
 		try {
 			// データベースへ接続
 			conn = DBManager.getConnection();
-			String sql = "SELECT * FROM thread WHERE id = ?";
+			String sql ="SELECT * FROM thread INNER JOIN user ON thread.userid = user.id WHERE thread.id=?;";
+			// "SELECT * FROM thread INNER JOIN user ON thread.userid = user.id WHERE thread_id=?";
+			//SELECT * FROM thread WHERE id = ?
+
 			// SELECTを実行し、結果表を取得
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, id);
@@ -108,8 +114,9 @@ public class ThreadDao {
 				String text = rs.getString("text");
 				String userId = rs.getString("userId");
 				String createDate = rs.getString("create_date");
+				String name = rs.getString("name");
 
-				return new Thread(ida, tittle,text,userId, createDate);
+				return new Thread(ida, tittle,text,userId, createDate,name);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

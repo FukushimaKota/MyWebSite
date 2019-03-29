@@ -10,7 +10,7 @@
 
 <title>ユーザ削除</title>
 </head>
-<body>
+<body style="background: url(img/b120.jpg);">
 <form action="DeleteServlet"method="post">
 
 <div class="logout">

@@ -27,7 +27,7 @@
 	<h3 class="tittle">${thread.tittle}</h3>
 
 	<p>投稿日:${thread.createDate}</p>
-	<p>投稿者:${user.name}</p>
+	<p>投稿者:${thread.name}</p>
 	<p>${thread.text}</p>
 	<p></p>
 	<p></p>
@@ -62,29 +62,12 @@
 	<c:forEach var="commentList" items="${commentList}">
 			<thead>
 				<tr>
-					<th>${user.name}</th>
+					<th>${commentList.name}</th>
 					<th>${commentList.comment}</th>
 				</tr>
 			</thead>
 	</c:forEach>
 	</table>
-	<!--
- <table class="table">
-  <thead>
-      <tr>
-   	  <th>bikakinn</th>
-      <th>ほう</th>
-    </tr>
-      <tr>
-   	  <th>zyuukakinn</th>
-      <th>ゲーム部とかは？結構面白いよ。</th>
-    </tr>
-    <tr>
-   	  <th>bikakinn</th>
-      <th>最近のvtuberでいい人おらん？</th>
-    </tr>
-  </thead>
-  </table> -->
 
 	<a href=TopServlet>Topに戻る</a>
 </body>

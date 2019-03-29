@@ -7,13 +7,16 @@ public class Comment {
 		private String threadId;
 		private String createDate;
 
+		private String name;
 
-		public Comment(int id ,String comment ,String userId ,String threadId,String createDate) {
+
+		public Comment(int id ,String comment ,String userId ,String threadId,String createDate, String name) {
 			this.id = id;
 			this.comment = comment;
 			this.userId = userId;
 			this.threadId = threadId;
 			this.createDate = createDate;
+			this.name=name;
 		}
 
 
@@ -48,6 +51,17 @@ public class Comment {
 		}
 		public void setCreateDate(String createDate) {
 			this.createDate = createDate;
+		}
+
+
+
+
+		public String getName() {
+			return name;
+		}
+
+		public void setName(String name) {
+			this.name = name;
 		}
 
 }
