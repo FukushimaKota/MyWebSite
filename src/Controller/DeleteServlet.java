@@ -44,7 +44,6 @@ public class DeleteServlet extends HttpServlet {
 
 		// URLからGETパラメータとしてIDを受け取る
 		String id = request.getParameter("id");
-
 		UserDao dao = new UserDao();
 		User user = dao.UserData(id);
 		request.setAttribute("user",user);

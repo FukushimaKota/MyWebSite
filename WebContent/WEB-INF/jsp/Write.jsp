@@ -11,31 +11,36 @@
 <body style="background: url(img/b120.jpg);">
 
 <div class="logout">
-<a class="logout2" href="LogoutServlet">ログアウト</a>
+<h6><span style="color:black;">${userInfo.name}さん</span><a class="logout2" href="LogoutServlet">ログアウト</a></h6>
 </div>
 
 <div class="a">
 <a href="TopServlet">Top</a>
 </div>
 
+
+<form action="writeServlet"method="post">
+<input type="hidden" value="${userInfo.id}" name="id">
+
 <p></p>
 <div class="input-group mb-3 table-area">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default">タイトル</span>
   </div>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  <input type="text" name="tittle" class="form-control">
 </div>
 
 <div class="input-group table-area aaa">
   <div class="input-group-prepend">
     <span class="input-group-text">本文</span>
   </div>
-  <textarea class="form-control" aria-label="With textarea"></textarea>
+  <textarea name="text" class="form-control"></textarea>
 </div>
 
 <div class="center">
-<button type="button" class="btn btn-info">ツイート</button>
+<button type="submit" class="btn btn-info">ツイート</button>
 </div>
+</form>
 
 <p></p>
 <a></a>

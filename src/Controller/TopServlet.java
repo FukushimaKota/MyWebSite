@@ -1,6 +1,7 @@
 package Controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.ThreadDao;
+import model.Thread;
 
 /**
  * Servlet implementation class TopServlet
@@ -29,6 +33,12 @@ public class TopServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+
+		ThreadDao threadDao = new ThreadDao();
+		ArrayList<Thread> threadList = threadDao.AllThread();
+		// リクエストスコープにユーザ一覧情報をセット
+		request.setAttribute("threadList", threadList);
+
 		// フォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/Top.jsp");
 		dispatcher.forward(request, response);

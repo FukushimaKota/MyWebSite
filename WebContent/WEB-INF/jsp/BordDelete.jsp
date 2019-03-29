@@ -13,10 +13,13 @@
 <a href="TopServlet">Top</a>
 </div>
 <p class="aa">本当に削除しますか？</p>
+
+<form action="bordDeleteServlet"method="post">
 <div class="button">
-<a href="bord1.html">キャンセル</a>
-<a href="Top1.html">OK</a>
-<!-- <input class=a type="submit" value="キャンセル"><input class=b type="submit" value="OK"> -->
+<input type="hidden" value="${thread.id}" name=id>
+<input class=a type="submit" name="cancellation" value="キャンセル">
+<input class=b type="submit" name="OK" value="OK">
 </div>
+</form>
 </body>
 </html>
