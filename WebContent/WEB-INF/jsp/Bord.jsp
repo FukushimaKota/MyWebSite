@@ -18,11 +18,11 @@
 		<a href="TopServlet">Top</a>
 	</div>
 
-<%-- 	<c:if test="${userInfo.id == thread.userId}"> --%>
-		<div class="delete">
-			<a href="bordDeleteServlet?id=${thread.id}">削除</a>
-		</div>
-<%-- 	</c:if> --%>
+	<c:if test="${userInfo.id == thread.userId}">
+	<div class="delete">
+		<a href="bordDeleteServlet?id=${thread.id}">削除</a>
+	</div>
+	</c:if>
 
 	<h3 class="tittle">${thread.tittle}</h3>
 
@@ -52,21 +52,21 @@
 
 	<p class="space">コメント欄</p>
 	<table class="table">
-				<thead>
-				<tr>
-					<th>名前</th>
-					<th>コメント</th>
-				</tr>
-			</thead>
+		<thead>
+			<tr>
+				<th>名前</th>
+				<th>コメント</th>
+			</tr>
+		</thead>
 
-	<c:forEach var="commentList" items="${commentList}">
+		<c:forEach var="commentList" items="${commentList}">
 			<thead>
 				<tr>
 					<th>${commentList.name}</th>
 					<th>${commentList.comment}</th>
 				</tr>
 			</thead>
-	</c:forEach>
+		</c:forEach>
 	</table>
 
 	<a href=TopServlet>Topに戻る</a>
